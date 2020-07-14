@@ -1,0 +1,40 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<h2>Listagem de Produtos</h2>
+
+<div class="card table-container">
+
+    <a href="/products/create">Criar/Incluir</a>
+
+    
+    <table width="100%">
+        <thead>
+            <tr>
+                <th>Nome do Produto</th>
+                <th>Tipo</th>
+                <th>Código</th>
+                <th>Valor</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>
+                    <span style="background-image: url({{ product.avatar_url }})"></span>
+                    {{product.name}}
+                </td>
+                <td>{{product.typeProduct}}</td>
+                <td>{{product.cod}}</td>
+                <td>{{product.value}}</td>
+                <td><a href="/products/{{product.id}}">ver</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</div>
+
+{% endblock content %}

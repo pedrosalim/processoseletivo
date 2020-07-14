@@ -1,0 +1,74 @@
+<div class="item">
+                <div>Foto do produto</div>
+                <div>
+                    <input 
+                        type="url" 
+                        name="avatar_url"
+                        placeholder="http://"
+                        value="{{ product.avatar_url }}"
+                    >
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Nome do Produto</div>
+                <div>
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Nome do Produto"
+                        value="{{ product.name }}"
+                    >
+                </div>
+            </div>
+
+            <div class="item">
+        <div>Tipo do Produto</div>
+        <div>
+            <select name="typeProduct" >
+                <option value="Mercearia"
+                {% if product.typeProduct == "Mercearia" %}selected{% endif %}>Mercearia</option>
+                <option value="Padaria"
+                {% if product.typeProduct == "Padaria" %}selected{% endif %}>Padaria</option>
+                <option value="Açougue"
+                {% if product.typeProduct == "Açougue" %}selected{% endif %}>Açougue</option>
+                <option value="Frios"
+                {% if product.typeProduct == "Frios" %}selected{% endif %}>Frios</option>
+                <option value="Higiene"
+                {% if product.typeProduct == "Higiene" %}selected{% endif %}>Higiene</option>
+                <option value="Beleza"
+                {% if product.typeProduct == "Beleza" %}selected{% endif %}>Beleza</option>
+                <option value="Decoração"
+                {% if product.typeProduct == "Decoração" %}selected{% endif %}>Decoração</option>
+                <option value="Temperos"
+                {% if product.typeProduct == "Temperos" %}selected{% endif %}>Temperos</option>
+                <option value="Roupa"
+                {% if product.typeProduct == "Roupa" %}selected{% endif %}>Roupa</option>
+            </select>
+        </div>
+    </div>
+
+            <div class="item">
+                <div>Código do Produto</div>
+                <div>
+                    <input 
+                        type="text" 
+                        name="cod" 
+                        value="{{ product.cod }}"
+                    >
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Valor do Produto</div>
+                <div>
+                    <input 
+                        type="text" 
+                        name="value"
+                        placeholder="Ex: 50 Reais"
+                        value="{{ product.value }}"
+                    >
+                </div>
+            </div>
+
+            <button type="submit">Salvar</button>

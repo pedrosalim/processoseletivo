@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "avatar_url": "https://www.moidecoentro.com.br/moidecoentro/wp-content/uploads/2019/07/moi-de-coentro-produtos-arroz-branco.jpg",
+      "name": "Arroz",
+      "typeProduct": "Mercearia",
+      "cod": "1",
+      "value": "10 Reais",
+      "created_at": 1594756547934
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://kingfoodbrasil.fbitsstatic.net/img/p/feijao-preto-kingfood-1kg-70118/256600.jpg?w=420&h=420&v=no-change",
+      "name": "Feijão",
+      "typeProduct": "Mercearia",
+      "cod": "2",
+      "value": "20 Reais",
+      "created_at": 1594756983208
+    }
+  ]
+}

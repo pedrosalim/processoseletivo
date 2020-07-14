@@ -1,0 +1,48 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<div class="card">
+
+    <section 
+        class="avatar" 
+        style="background: url({{ product.avatar_url }}) no-repeat center center / cover">
+    </section>
+
+        <section class="details">
+            <a class="back" href="/products">Voltar</a>
+            <h3>Detalhes</h3>
+
+            <div class="item">
+                <div>Nome do Produto</div>
+                <div>{{ product.name }}</div>
+            </div>
+
+            <div class="item">
+                <div>Código do Produto</div>
+                <div>{{ product.cod }}</div>
+            </div>
+
+            <div class="item">
+                <div>Tipo do Produto</div>
+                <div>{{ product.typeProduct }}</div>
+            </div>
+
+            <div class="item">
+                <div>Valor do Produto</div>
+                <div>{{ product.value }}</div>
+            </div>
+
+
+            <div class="item">
+                <div>Data de cadastro</div>
+                <div>{{ product.created_at }}</div>
+            </div>
+
+            <a href="/products/{{ product.id }}/edit" class="button">Editar</a>
+
+        </section>
+    
+</div>
+
+{% endblock content %}
